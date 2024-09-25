@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: beige;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-title {
+ width: 40%;
+ margin-right: 10%;
+ margin-left: 5%;
+}
+
+.header-title h1 {
+    font-size: 2rem;
+}
+
+.header-title h2 {
+    font-size: 1rem;
+}
