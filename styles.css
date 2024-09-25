@@ -13,15 +13,28 @@ header {
 }
 
 .header-title {
- width: 40%;
- margin-right: 10%;
- margin-left: 5%;
+    width: 40%;
+    margin-right: 10%;
+    margin-left: 5%;
 }
 
 .header-title h1 {
     font-size: 2rem;
+    margin-bottom: 0;
 }
 
 .header-title h2 {
     font-size: 1rem;
+}
+
+.navbar {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 5%;
+}
+
+.navbar-title {
+    margin-left: 10px;
 }
