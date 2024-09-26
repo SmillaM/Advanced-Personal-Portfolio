@@ -1,15 +1,22 @@
+:root {
+    --primary-color: paleturquoise;
+    --secondary-color: rgb(135, 220, 220);
+    color: black;
+}
+
 * {
     border: solid 1px orange;
 }
 
 body {
+    background-color: var(--primary-color);
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 header {
+    background-color: var(--secondary-color);
     width: 100%;
-    background-color: beige;
     margin: 0;
     display: flex;
     align-items: center;
@@ -45,7 +52,7 @@ header {
 
 main {
     width: 100%;
-    padding: 50px 0;
+    padding: 20px 0;
     display: flex;
     gap: 5%;
     align-items: center;
@@ -67,13 +74,12 @@ main img {
     border-radius: 20px;
 }
 
-
 footer {
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: space-around;
     margin-bottom: 0;
     margin-top: 5%;
-    background-color: beige;
     padding: 10px 0
 }
 
@@ -109,39 +115,60 @@ footer {
     margin-right: 5%;
 }
 
-/* Portfolio */
+/* Om mig */
 
-.galleri-rubrik {
+.sid-rubrik {
     text-align: center;
-    margin: 20px;
+    margin-top: 20px;
   }
 
-.galleri {
-    width: 100%;
-    height: auto;
-    padding: 20px 5%;
-    margin: 0;
-    text-align: center;
+  .om-mig {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+
+/* Portfolio */
+
+  .galleri {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5%;
-  }
-  
-  .galleri figure {
+}
+
+.galleri figure {
     margin: 0;
     border-radius: 10px;
     overflow: hidden;
-  }
-  
-  .galleri img {
+}
+
+.galleri img {
     width: 100%;
     height: auto;
     display: block;
-  }
-  
-  figcaption {
+}
+
+figcaption {
     text-align: center;
     margin-top: 10px;
     font-size: 1rem;
-  }
-  
+}
+
+.link-to-main-page {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CV */
+
+.arbete {
+    margin-left: 5%;
+}
+
+.utbildning {
+    margin-right: 5%;
+}

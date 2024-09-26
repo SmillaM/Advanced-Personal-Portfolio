@@ -9,3 +9,4 @@
 7. Some of the selectors in main were duplicated without me noticing. Which mad eme confused when nothing happend.
 8. I want the porttrait to be cropped horizontally for smaller screens. So I added object-fit: cover;
 9. Now the portrait looks weird on wide screens. So I added a max-width of 1000px.
+10. My content appeared outside the website. I realized that I could have width 100% and 5% margins on each side. Instead, I changed the margins to auto and set the width to 90%.
