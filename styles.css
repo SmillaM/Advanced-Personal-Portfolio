@@ -1,3 +1,7 @@
+* {
+    border: solid 1px orange;
+}
+
 body {
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -37,4 +41,38 @@ header {
 
 .navbar-title {
     margin-left: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    background-color: beige;
+    padding: 10px 0
+}
+
+.kontakt {
+    margin-left: 5%;
+}
+
+.social-medier a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px; 
+    display: flex;
+    align-items: center;
+}
+
+.sociala-medier a:hover {
+    transform: scale(1.05);
+}
+
+.fab {
+    font-size: 30px;
+    color: black;
+    margin: 0 10px;
+}
+
+.copyright {
+    margin-right: 5%;
 }
