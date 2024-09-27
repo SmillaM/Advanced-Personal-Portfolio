@@ -1,23 +1,217 @@
 :root {
     --primary-color: paleturquoise;
     --secondary-color: rgb(135, 220, 220);
-    color: black;
 }
 
+/* General */
+
 * {
-    border: solid 1px orange;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    font-size: 1rem;
+    color: black;
     background-color: var(--primary-color);
-    margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    line-height: 1.5;
+}
+
+main > h1,
+main > h2 {
+    text-align: center; 
+}
+
+.social-media a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.social-media span {
+    margin-left: 5%;
+}
+
+
+
+/* Layout for screens up to 768px */
+
+@media (max-width: 768px) {
+    header {
+        max-width: 100%;
+        height: auto;
+        padding: 5% 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--secondary-color);
+    }
+    
+    .header-title {
+        margin-right: 5%;
+    }
+    
+    main {
+        width: 100%;
+        height: auto;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main *:not(:last-child) {
+        margin-bottom: 3%;
+    }
+    
+    
+    footer {
+        background-color: var(--secondary-color);
+        padding: 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;        
+        gap: 10px;                               
+    }
+    
+    .fab {
+        font-size: 30px;
+    }
+    
+    .copyright {
+        grid-column: 1 / -1; 
+    }
+    
+    .copyright p {
+        margin-top: 5%;
+    } 
+}
+
+/* Layout for screens up to 480px */
+
+@media (max-width: 480px) {
+    header {
+        max-width: 100%;
+        height: auto;
+        padding: 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--secondary-color);
+    }
+    
+    .header-title {
+        margin-right: 8%;
+    }
+    
+    main {
+        width: 100%;
+        height: auto;
+        padding: 8%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main *:not(:last-child) {
+        margin-bottom: 3%;
+    }
+    
+    main > h1,
+    main > h2 {
+        text-align: center; 
+    }
+    
+    main img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    footer {
+        background-color: var(--secondary-color);
+        padding: 8%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;        
+        gap: 10px;                               
+    }
+    
+    .social-media a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .fab {
+        font-size: 30px;
+    }
+    
+    .copyright {
+        grid-column: 1 / -1; 
+    }
+    
+    .copyright p {
+        margin-top: 5%;
+    } 
+}
+
+
+
+/* Animations */
+
+.sociala-medier a:hover {
+    transform: scale(1.05);
+}
+
+
+/*
+
+ORIGINAL INNAN ÄNDRINGAR
+
+Media query för större skärmar (tablets)
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+}
+
+/* Media query för ännu större skärmar (desktops) 
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px;
+    }
+}
+
+
+/*
 header {
     background-color: var(--secondary-color);
     width: 100%;
-    height: auto;
+    height: 150px;
     margin: 0;
     display: flex;
     align-items: center;
@@ -51,20 +245,8 @@ header {
     margin-left: 10px;
 }
 
-main {
-    width: 100%;
-    padding: 20px 0;
-    display: flex;
-    gap: 5%;
-    align-items: center;
-}
-
 main .intro {
     margin-left: 5%;
-}
-
-main .main-img-container {
-    margin-right: 5%;
 }
 
 main img {
@@ -75,53 +257,13 @@ main img {
     border-radius: 20px;
 }
 
-footer {
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 0;
-    margin-top: 5%;
-    padding: 10px 0
-}
-
-.kontakt {
-    margin-left: 5%;
-}
-
-.sociala-medier {
-    margin-left: 5%;
-}
-
-.sociala-medier a {
-    color: black;
-    text-decoration: none;
-    font-size: 1rem; 
-    display: flex;
-    align-items: center;
-}
-
-.sociala-medier a:hover {
-    transform: scale(1.05);
-}
-
-.fab {
-    font-size: 30px;
-    color: black;
-    margin: 0 10px;
-}
-
-.copyright {
-    font-size: 1rem;
-    margin-left: 5%;
-    margin-right: 5%;
-}
 
 .link-to-main-page {
     text-decoration: none;
     color: inherit;
 }
 
-/* Om mig */
+/* Om mig 
 
 .sid-rubrik {
     text-align: center;
@@ -133,7 +275,7 @@ footer {
     align-items: center;
     width: 90%;
     margin: 0 5%;
-    max-width: 1200px;
+    max-width: 1500px;
   }
 
   .om-mig-img {
@@ -142,10 +284,7 @@ footer {
     margin-bottom: 15px;
   }
 
-
-
-
-/* Portfolio */
+/* Portfolio
 
   .galleri {
     width: 90%;
@@ -173,7 +312,7 @@ figcaption {
     font-size: 1rem;
 }
 
-/* CV */
+/* CV 
 
 .arbete {
     margin-left: 5%;
@@ -182,3 +321,5 @@ figcaption {
 .utbildning {
     margin-right: 5%;
 }
+
+/*
