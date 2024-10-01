@@ -25,21 +25,139 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
+
+/* General animations */
+
+ul a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+ul a:hover::after {
+    width: 100%;
+}
+
+.contact a,
+.social-media a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.contact a:hover,
+.social-media a:hover {
+    transform: scale(1.03);
+}
+
+/* Header */ 
+
+header {
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-title {
+    margin-left: 8%;
+}
+
+.header-title h2 {
+    font-size: 1rem;
+    margin-top: 3px;
+}
+
+.navbar {
+    margin-right: 8%;
+}
+
+
+/* Navbar */
 
 ul {
     list-style: none;
     line-height: 1.5;
+    display: flex;
 }
 
-main > h1,
-main > h2 {
-    text-align: center; 
+.navbar a,
+footer a {
+    position: relative; 
+    padding-bottom: 2px;
+    margin-left: 10px;
+}
+
+.link-to-main-page {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main */
+
+main {
+    width: 100%;
+    padding: 5% 8%;
+}
+
+.content-smaller-screens {
+    display: none;
+}
+
+.content-larger-screens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-larger-screens h2,
+.content-larger-screens h1,
+.content-larger-screens article p {
+    margin-bottom: 20px;
+    margin-right: 10%;
+}
+
+.content-larger-screens img {
+    min-width: 300px;
+    max-width: 500px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 45% 50%;
+    overflow: hidden;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--secondary-color);
+    padding: 4% 8%;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 2fr 1fr;        
+    gap: 0;
+    position: relative;                        
+}
+
+footer a {
+    position: relative;
+}
+
+footer h4 {
+    margin-bottom: 10px;
 }
 
 .social-media a {
@@ -48,19 +166,34 @@ main > h2 {
     align-items: center;
 }
 
-.social-media span {
-    margin-left: 5%;
+.fab {
+    font-size: 30px;
 }
 
+.social-media span {
+    margin-left: 10px;
+}
+
+footer ul {
+    justify-self: end;
+}
+
+.copyright {
+    grid-column: 1 / -1; 
+    margin-top: 15px;
+    align-self: end;
+}
+
+*/
 
 
-/* Layout for screens up to 768px */
+/* Layout for screens up to 768px 
 
 @media (max-width: 768px) {
     header {
         max-width: 100%;
         height: auto;
-        padding: 5% 5%;
+        padding: 5%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -82,6 +215,11 @@ main > h2 {
     
     main *:not(:last-child) {
         margin-bottom: 3%;
+    }
+
+    main > h1,
+    main > h2 {
+    text-align: center; 
     }
     
     
@@ -107,9 +245,9 @@ main > h2 {
     } 
 }
 
-/* Layout for screens up to 480px */
+/* Layout for screens up to 480px
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header {
         max-width: 100%;
         height: auto;
@@ -175,13 +313,7 @@ main > h2 {
     } 
 }
 
-
-
-/* Animations */
-
-.sociala-medier a:hover {
-    transform: scale(1.05);
-}
+*/
 
 
 /*
@@ -206,62 +338,6 @@ Media query för större skärmar (tablets)
     }
 }
 
-
-/*
-header {
-    background-color: var(--secondary-color);
-    width: 100%;
-    height: 150px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header-title {
-    width: 40%;
-    margin-right: 10%;
-    margin-left: 5%;
-}
-
-.header-title h1 {
-    font-size: 2rem;
-    margin-bottom: 0;
-}
-
-.header-title h2 {
-    font-size: 1rem;
-}
-
-.navbar {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-right: 5%;
-}
-
-.navbar-title {
-    margin-left: 10px;
-}
-
-main .intro {
-    margin-left: 5%;
-}
-
-main img {
-    width: 100%;
-    max-width: 1000px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-
-.link-to-main-page {
-    text-decoration: none;
-    color: inherit;
-}
 
 /* Om mig 
 

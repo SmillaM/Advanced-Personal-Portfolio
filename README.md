@@ -11,3 +11,6 @@
 9. Now the portrait looks weird on wide screens. So I added a max-width of 1000px.
 10. My content appeared outside the website. I realized that I could have width 100% and 5% margins on each side. Instead, I changed the margins to auto and set the width to 90%.
 11. I wanted to make my website responsive width "mobile-first" and made media queries for wider screens. 
+12. Max-width sizes found in https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
+13. One of the most challenging things was that I wanted to structure the HTML different based on the max-width. So I asked ChatGPT for help and it recommended me to do two different codes in HTML, which was totally new for me. And then you just do display: none.
+14. I wanted my portrait to be cropped for responsive design. I realized that I wasn't really centered. So instead of editing the source img, I used object-position: 45% 50%;
