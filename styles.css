@@ -1,6 +1,8 @@
 :root {
-    --primary-color: paleturquoise;
-    --secondary-color: rgb(135, 220, 220);
+    --primary-color:#E9EFEC;
+    --secondary-color: #C4DAD2;
+    --detail-color: #6A9C89;
+    --detail-color-hover: #63c29d;
 }
 
 /* General */
@@ -9,13 +11,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 1rem;
+    color: #16423C;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-size: 1rem;
-    color: black;
     background-color: var(--primary-color);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 100%;
     height: 100%;
 }
@@ -26,6 +32,7 @@ h1 {
 
 h2 {
     font-size: 1.2rem;
+    color: var(--detail-color);
 }
 
 a {
@@ -42,11 +49,15 @@ ul a::after {
     bottom: 0;
     width: 0;
     height: 1.5px;
-    background-color: black;
+    background-color: var(--detail-color);
     transition: width 0.3s ease;
 }
 
 ul a:hover::after {
+    width: 100%;
+}
+
+ul a.active::after {
     width: 100%;
 }
 
@@ -187,6 +198,7 @@ footer ul {
     object-fit: cover;
     object-position: 45% 50%;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 /* Om mig */
@@ -245,34 +257,94 @@ figure img, figure video {
     transition: transform var(--transition-speed);
 }
 
-.project-tile img:hover {
-    transform: scale(1.05);
-}
-
-.project-tile a {
-    color: inherit;;
-    font-weight: bold;
-    display: block;
-    margin-top: 0;
-    text-decoration: none;
-}
-
-.project-tile a:hover {
-    color: var(--secondary-color);
-}
-
-
-
 /* CV */
 
-.arbete {
-    margin-left: 5%;
+.erfarenhet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 30px;
+    margin-top: 15px;
 }
 
-.utbildning {
-    margin-right: 5%;
+.erfarenhet p {
+  line-height: 1.5;
+  text-align: center;
 }
 
+.erfarenhet h3,
+.erfarenhet h4 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.erfarenhet h3 {
+    text-decoration: underline;
+  }
+
+.program {
+    grid-column: 1 / -1; 
+    margin-top: 25px;
+    align-self: end;
+}
+
+.program p {
+    margin-top: 15px;
+}
+
+/* Contact */
+
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--detail-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--detail-color-hover);
+}
 
 
 /* Layout for screens up to 768px 
